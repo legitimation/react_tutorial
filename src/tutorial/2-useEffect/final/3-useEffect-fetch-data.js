@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const url = 'https://api.github.com/users';
 
 // second argument
+// fetch api using async await func 
 
 const UseEffectFetchData = () => {
   const [users, setUsers] = useState([]);
