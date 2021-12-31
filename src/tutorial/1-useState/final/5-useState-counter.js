@@ -7,12 +7,13 @@ const UseStateCounter = () => {
     setValue(0);
   };
 
+  // if clicked multiple time (value + 1 does not work as it always calls the value before being added thus, should use prevstate )
   const complexIncrease = () => {
     setTimeout(() => {
-      // setValue(value + 1);
-      setValue((prevState) => {
-        return prevState + 1;
-      });
+      setValue(value + 1);
+      // setValue((prevState) => {
+      //   return prevState + 1;
+      // });
     }, 2000);
   };
 
