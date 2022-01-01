@@ -17,7 +17,7 @@ const UseEffectCleanup = () => {
       console.log('cleanup');
       // window.removeEventListener('resize', checkSize);
     };
-  }, []);
+  });
   console.log('render');
   return (
     <>
@@ -28,3 +28,4 @@ const UseEffectCleanup = () => {
 };
 
 export default UseEffectCleanup;
+// if event listener is added on user effect, the listener will be added whenver it re-renders thus having multiple event listners creating data leak --> therefore, must make the useeffect render once or at a clean up function such as removing the added eventlistner to always maintain a single listener
