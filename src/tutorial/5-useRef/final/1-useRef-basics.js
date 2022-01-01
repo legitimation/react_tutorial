@@ -12,8 +12,10 @@ const UseRefBasics = () => {
     console.log(refContainer.current.value);
   };
   useEffect(() => {
-    console.log(refContainer.current);
-    refContainer.current.focus();
+    console.log(refContainer.current, '123');
+    console.log(refContainer.current.value, '1234');
+    refContainer.current.focus(); 
+    // aims focus to the container when loaded 
   });
 
   return (
