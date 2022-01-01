@@ -15,6 +15,7 @@ const ReactRouterSetup = () => {
       <Navbar />
       <Switch>
         <Route exact path='/'>
+        {/* exact path required to cover only the exact path, as '/' implies all other url */}
           <Home />
         </Route>
         <Route path='/about'>
@@ -24,9 +25,11 @@ const ReactRouterSetup = () => {
           <People />
         </Route>
         <Route path='/person/:id' children={<Person />}></Route>
+        {/* children allows seperate single page for all child components using `:id` props */}
         <Route path='*'>
           <Error />
         </Route>
+        {/* path * to cover all other error page, (for practical cases, it would be good to redirect to the main page just in case the user types the wrong url) */}
       </Switch>
     </Router>
   );
