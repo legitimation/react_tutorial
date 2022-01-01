@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 const ControlledInputs = () => {
   const [person, setPerson] = useState({ firstName: '', email: '', age: '' });
   const [people, setPeople] = useState([]);
+  // when dealing multiple inputs, make an object for the corresponding input value (id, age, email) and deal with the handle change function as mentioned to deal with all inputs w a single function at once
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
