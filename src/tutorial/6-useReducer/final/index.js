@@ -3,6 +3,9 @@ import Modal from './Modal';
 import { data } from '../../../data';
 // reducer function
 import { reducer } from './reducer';
+
+// default state is the default value of activating reducer, 상태관리 (uses reducer), dispatch sends the type of action and value as in paylod
+
 const defaultState = {
   people: [],
   isModalOpen: false,
