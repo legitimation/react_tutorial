@@ -12,6 +12,7 @@ const Product = ({ image, name, price }) => {
   );
 };
 
+//prop types, check whether specific proptype is implemented or set default props
 Product.propTypes = {
   image: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
