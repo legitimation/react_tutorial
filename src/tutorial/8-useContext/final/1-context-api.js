@@ -5,6 +5,7 @@ import { data } from '../../../data';
 
 const PersonContext = React.createContext();
 // two components - Provider, Consumer
+// context api, create then ref, global variable
 
 const ContextAPI = () => {
   const [people, setPeople] = useState(data);
